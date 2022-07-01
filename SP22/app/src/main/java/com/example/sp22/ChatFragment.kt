@@ -15,8 +15,10 @@ class ChatFragment : Fragment(R.layout.fragment_chat) {
         _binding = FragmentChatBinding.bind(view)
 
         with (binding) {
-            btnOther.setOnClickListener {
-                findNavController().navigate(R.id.action_chatFragment_to_photosFragment)
+            btnPhotos.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_chatFragment_to_photosFragment,
+                    PhotosFragment.createBundle((tvChat.text ?: "Error").toString()))
             }
         }
     }

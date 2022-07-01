@@ -15,8 +15,10 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         _binding = FragmentSettingsBinding.bind(view)
 
         with (binding) {
-            btnOther.setOnClickListener {
-                findNavController().navigate(R.id.action_settingsFragment_to_photosFragment)
+            btnPhotos.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_settingsFragment_to_photosFragment,
+                    PhotosFragment.createBundle((tvSettings.text ?: "Error").toString()))
             }
         }
     }

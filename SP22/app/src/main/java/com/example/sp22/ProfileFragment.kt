@@ -15,8 +15,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         _binding = FragmentProfileBinding.bind(view)
 
         with (binding) {
-            btnOther.setOnClickListener {
-                findNavController().navigate(R.id.action_profileFragment_to_photosFragment)
+            btnPhotos.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_profileFragment_to_photosFragment,
+                    PhotosFragment.createBundle((tvProfile.text ?: "Error").toString()))
             }
         }
     }

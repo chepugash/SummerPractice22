@@ -15,8 +15,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = FragmentHomeBinding.bind(view)
 
         with (binding) {
-            btnOther.setOnClickListener {
-                findNavController().navigate(R.id.action_homeFragment_to_photosFragment)
+            btnPhotos.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_homeFragment_to_photosFragment,
+                    PhotosFragment.createBundle((tvHome.text ?: "Error").toString()))
             }
         }
     }

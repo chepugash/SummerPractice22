@@ -15,8 +15,10 @@ class MusicFragment : Fragment(R.layout.fragment_music) {
         _binding = FragmentMusicBinding.bind(view)
 
         with (binding) {
-            btnOther.setOnClickListener {
-                findNavController().navigate(R.id.action_musicFragment_to_photosFragment)
+            btnPhotos.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_musicFragment_to_photosFragment,
+                    PhotosFragment.createBundle((tvMusic.text ?: "Error").toString()))
             }
         }
     }

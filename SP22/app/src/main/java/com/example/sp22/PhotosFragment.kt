@@ -15,7 +15,7 @@ class PhotosFragment : Fragment(R.layout.fragment_photos) {
 
         if (text != null) {
             if (text.isNotEmpty()) {
-                Snackbar.make(view, text, Snackbar.LENGTH_INDEFINITE).show()
+                Snackbar.make(view, text, Snackbar.LENGTH_LONG).show()
             }
         }
     }
@@ -24,10 +24,7 @@ class PhotosFragment : Fragment(R.layout.fragment_photos) {
         private const val ARG_TEXT = "ARG_TEXT"
         fun createBundle(text: String): Bundle {
             val bundle = Bundle()
-            bundle.putString(
-                ARG_TEXT,
-                text
-            )
+            bundle.putString(ARG_TEXT, text)
             return bundle
         }
     }
