@@ -16,8 +16,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         with (binding) {
             btnOther.setOnClickListener {
-//                findNavController().navigate(R.id.action_profileFragment_to_musicFragment,
-//                    MusicFragment.createBundle((etText.text ?: "Error").toString()))
+                findNavController().navigate(R.id.action_profileFragment_to_photosFragment)
             }
         }
     }

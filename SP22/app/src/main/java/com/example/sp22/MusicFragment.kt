@@ -3,23 +3,26 @@ package com.example.sp22
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
+import androidx.navigation.fragment.findNavController
+import com.example.sp22.databinding.FragmentMusicBinding
 
 class MusicFragment : Fragment(R.layout.fragment_music) {
+    var _binding: FragmentMusicBinding? = null
+    private val binding get() = _binding!!
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val text = arguments?.getString(ARG_TEXT).orEmpty()
-        if (text.isNotEmpty()) {
-            Snackbar.make(view, text, Snackbar.LENGTH_LONG).show()
+        _binding = FragmentMusicBinding.bind(view)
+
+        with (binding) {
+            btnOther.setOnClickListener {
+                findNavController().navigate(R.id.action_musicFragment_to_photosFragment)
+            }
         }
     }
 
-    companion object {
-        private const val ARG_TEXT = "amazing"
-        fun createBundle(text: String): Bundle {
-            val bundle = Bundle()
-            bundle.putString(ARG_TEXT, text)
-            return bundle
-        }
+    override fun onDestroy() {
+        _binding = null
+        super.onDestroy()
     }
 }
