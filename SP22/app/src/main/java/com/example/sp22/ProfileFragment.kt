@@ -15,9 +15,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         _binding = FragmentProfileBinding.bind(view)
 
         with (binding) {
-            btnMusic.setOnClickListener {
-                findNavController().navigate(R.id.action_profileFragment_to_musicFragment,
-                    MusicFragment.createBundle((etText.text ?: "Error").toString()))
+            btnOther.setOnClickListener {
+//                findNavController().navigate(R.id.action_profileFragment_to_musicFragment,
+//                    MusicFragment.createBundle((etText.text ?: "Error").toString()))
             }
         }
     }

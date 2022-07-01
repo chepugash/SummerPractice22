@@ -12,12 +12,48 @@
         tools:layout="@layout/fragment_profile"
         >
         <action
-            android:id="@+id/action_profileFragment_to_musicFragment"
-            app:destination="@id/musicFragment" />
+            android:id="@+id/action_profileFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
     </fragment>
     <fragment
         android:id="@+id/musicFragment"
         android:name="com.example.sp22.MusicFragment"
         android:label="MusicFragment"
-        tools:layout="@layout/fragment_music"/>
+        tools:layout="@layout/fragment_music">
+        <action
+            android:id="@+id/action_musicFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.sp22.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sp22.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.sp22.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.example.sp22.PhotosFragment"
+        android:label="PhotosFragment"
+        tools:layout="@layout/fragment_photos"/>
 </navigation>
