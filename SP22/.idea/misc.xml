@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1065" />
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.1065" />
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1065" />
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1065" />
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable/ic_baseline_queue_music_24.xml" value="0.1065" />
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1065" />
+        <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1065" />
         <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/layout/fragment_chat.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/chepu/AndroidStudioProjects/SummerPractice22/SP22/app/src/main/res/layout/fragment_home.xml" value="0.1796875" />
