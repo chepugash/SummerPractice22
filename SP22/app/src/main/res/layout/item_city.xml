@@ -14,9 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="12dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools">
+        android:paddingBottom="12dp">
 
         <ImageView
             android:id="@+id/iv_cover"
@@ -29,12 +27,12 @@
             />
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/tv_author"
-            tools:text="Equals"
+            app:layout_constraintBottom_toTopOf="@id/tv_country"
+            tools:text="Moscow"
             android:textSize="16sp"
             app:layout_constraintVertical_bias=".9"
             android:layout_marginStart="16dp"
@@ -43,14 +41,14 @@
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
-            android:id="@+id/tv_author"
+            android:id="@+id/tv_country"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_name"
-            tools:text="Eminem" />
+            app:layout_constraintTop_toBottomOf="@id/tv_city"
+            tools:text="Russia" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

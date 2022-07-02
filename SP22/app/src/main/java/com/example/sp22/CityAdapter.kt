@@ -4,26 +4,28 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
-import com.example.sp22.databinding.ItemMainBinding
+import com.example.sp22.databinding.ItemCityBinding
 
-class SongAdapter(
-    private val list: List<Song>,
+class CityAdapter(
+    private val list: List<City>,
     private val glide: RequestManager,
-    private val onItemClick: (Song) -> Unit,
-    ) : RecyclerView.Adapter<SongHolder>() {
+    private val onItemClick: (City) -> Unit,
+) : RecyclerView.Adapter<CityHolder>() {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-        ): SongHolder = SongHolder(ItemMainBinding.inflate(
+    ): CityHolder = CityHolder(
+            ItemCityBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
         ),
-    glide = glide,
-    onItemClick,
+        glide = glide,
+        onItemClick,
     )
 
-    override fun onBindViewHolder(holder: SongHolder, position: Int) {
+    override fun onBindViewHolder(holder: CityHolder, position: Int) {
         holder.onBind(list[position])
     }
 
