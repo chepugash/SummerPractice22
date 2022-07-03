@@ -18,5 +18,9 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.sp22.DetailsFragment"
         android:label="DetailsFragment"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="argument"
+            app:argType="integer" />
+    </fragment>
 </navigation>

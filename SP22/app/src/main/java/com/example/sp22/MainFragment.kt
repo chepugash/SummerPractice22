@@ -6,6 +6,8 @@ import android.view.View
 import android.view.animation.GridLayoutAnimationController
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.sp22.databinding.FragmentMainBinding
@@ -24,11 +26,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     private fun initAdapter() {
         adapter = CityAdapter(CityRepository.cities, Glide.with(this)) {
-            Snackbar.make(
-                binding.root,
-                "City id: ${it.id}",
-                Snackbar.LENGTH_LONG
-            ).show()
+            val action = MainFragmentDirections.actionMainFragmentToDetailsFragment(it.id)
+            binding.root.findNavController().navigate(action)
         }
         binding.rvMain.adapter = adapter
         binding.rvMain.layoutManager = GridLayoutManager(requireContext(), 2)
